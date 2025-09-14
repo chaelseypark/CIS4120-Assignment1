@@ -1,0 +1,70 @@
+:root{
+  --penn-blue:#011F5B;
+  --penn-red:#990000;
+  --bg:#EAF1F8;
+  --card:#FFFFFF;
+  --text:#0F1115;
+  --input:#F3F6FB;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Inter,'Helvetica Neue',Arial,sans-serif;
+  background:radial-gradient(1200px 700px at 50% 50%, #f3f6fb 0%, #e8edf6 40%, #dde6f5 100%);
+  color:var(--text);
+}
+
+.viewport{height:100%;display:grid;place-items:center;padding:24px}
+
+/* iPhone-style frame (390x844 = iPhone 14) */
+.phone{
+  width:390px;height:844px;background:var(--bg);
+  border:10px solid #0b0e14;border-bottom-width:14px;border-radius:45px;
+  box-shadow:0 24px 60px rgba(10,20,40,.35), inset 0 0 0 1px rgba(255,255,255,.06);
+  overflow:hidden;position:relative;
+}
+
+/* notch + decorative address bar */
+.notch{position:absolute;top:10px;left:0;right:0;display:flex;justify-content:center}
+.island{width:125px;height:32px;background:#0b0e14;border-radius:22px;box-shadow:inset 0 -2px 4px rgba(255,255,255,.05)}
+.address{margin:56px 18px 8px;height:34px;border-radius:18px;background:#D6DCE6;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:600;opacity:.8}
+
+/* top branding */
+.brand{display:flex;align-items:center;justify-content:space-between;padding:10px 14px;background:var(--penn-blue);color:#fff}
+.brand-left{display:flex;align-items:center;gap:8px}
+.title{font-size:20px;font-weight:700}
+.welcome{font-size:14px}.welcome strong{color:#c7ddff}
+
+/* red section header */
+.section-title{background:#990000;color:#fff;font-weight:700;padding:10px 14px}
+
+/* main content */
+.screen-content{padding:14px;display:grid;gap:14px}
+
+.row.select{
+  background:var(--card);border:none;display:flex;justify-content:space-between;align-items:center;
+  padding:14px 16px;border-radius:12px;box-shadow:0 1px 0 rgba(0,0,0,.05);font-size:16px
+}
+.chev{font-size:20px;color:#9aa4b2}
+
+.input{background:var(--card);border-radius:12px;padding:14px 16px;border:1px solid #e6eaf2}
+.placeholder{color:#A5AEBE}
+
+.advanced{display:flex;align-items:center;gap:6px;font-weight:600;margin-top:6px}
+.advanced .chev{color:inherit}
+
+.cta{
+  margin-top:6px;align-self:start;background:var(--penn-blue);color:#fff;border:none;border-radius:22px;
+  padding:12px 24px;font-weight:700;box-shadow:0 6px 16px rgba(1,31,91,.25)
+}
+
+/* bottom buttons */
+.other{position:absolute;bottom:18px;left:12px;right:12px}
+.other-label{background:#DCE5F0;color:#202531;font-weight:700;padding:8px 12px;border-top-left-radius:10px;border-top-right-radius:10px}
+.other-actions{padding:10px 4px 0 4px;display:grid;gap:10px}
+.primary-btn{
+  background:var(--penn-blue);color:#fff;border:none;padding:14px 16px;border-radius:14px;
+  font-weight:800;letter-spacing:.2px;box-shadow:0 6px 16px rgba(1,31,91,.25)
+}
